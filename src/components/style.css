@@ -1,0 +1,218 @@
+* {
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #51bcff;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffff47;
+  height: 420px;
+  width: 420px;
+  padding: 24px;
+  border-radius: 10px;
+}
+
+/* Helpers */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title */
+.title {
+  font-family: "Karla", sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 4px;
+}
+
+/* Game Description */
+.gameDescription {
+  color: rgb(88, 88, 88);
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+/* Dice */
+.wrapper__dice {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+}
+
+.dice {
+  display: flex;
+  font-family: "Karla", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 24px;
+  background-color: rgb(127, 127, 127);
+  border-radius: 4px;
+  width: 44px;
+  height: 44px;
+  box-shadow: 0px 2px 2px 0px rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+
+.dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color:rgb(255, 255, 255);
+}
+
+.--1 {
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.--2 {
+  width: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5px;
+}
+
+.--2 .dot:nth-of-type(2) {
+  display: flex;
+  align-self: flex-end;
+}
+
+.--3 {
+  width: 44px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.--3 .dot:nth-of-type(2) {
+  align-self: center;
+}
+
+.--3 .dot:nth-of-type(3) {
+  align-self: flex-end;
+}
+
+.--4 {
+  padding: 5px;
+  width: 44px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.--4 .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.--5 {
+  padding: 5px;
+  width: 44px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.--5 .column:nth-of-type(2) {
+  justify-content: center;
+}
+
+.--5 .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.--6 {
+  padding: 5px;
+  width: 44px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.--6 .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Roll Dice Button */
+.button__dice {
+  font-family: "Karla", sans-serif;
+  width: 100px;
+  height: 40px;
+  color: white;
+  margin-top: 12px;
+  background-color: rgb(255, 0, 0);
+  box-shadow: 0px 3.2px 7.7px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.button__dice:focus {
+  outline: none;
+}
+
+.button__dice:active {
+  box-shadow: inset 2px 2px 10px -7px rgba(0, 0, 0, 0.5);
+}
+
+.isFrozen {
+  display: grid;
+  font-family: "Karla", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 24px;
+  border-radius: 4px;
+  width: 44px;
+  height: 44px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  background-color: #0008ff;
+}
+
+/* Statistics */
+.bestTimer, .timer, .counter--roll {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  color:rgb(41, 41, 41);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.wrapper__stats {
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+}

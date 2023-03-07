@@ -1,0 +1,15 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+.body
+{
+  width: 100hh;
+  height: 100vh;
+  background:  rgb(227, 227, 227);
+}
+a
+{
+  color: black;
+}
